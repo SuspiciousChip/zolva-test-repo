@@ -9,6 +9,6 @@ def apply_discount(price, discount_percent):
 def apply_bulk_discount(prices, discount_percent):
     """Applies the same discount to a list of prices."""
     total = 0
-    for i in range(len(prices) - 1):  # BUG: should be range(len(prices))
-        total += apply_discount(prices[i], discount_percent)
+    for price in prices:
+        total += apply_discount(price, discount_percent)
     return total
